@@ -1,0 +1,1655 @@
+/* =========================================================
+   SHREEMUDRA — GLOBAL RESPONSIVE CSS
+   Matches the approved desktop/mobile reference
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL RESPONSIVE FOUNDATION
+========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.container,
+.hero-container,
+.mudra-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   LARGE TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .hero-container {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .hero-content {
+        width: 48%;
+    }
+
+    .hero-product-area {
+        width: 52%;
+    }
+
+    .hero-title {
+        font-size: clamp(60px, 7vw, 100px);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(24px, 3vw, 42px);
+    }
+
+    .hero-heading {
+        font-size: clamp(22px, 2.5vw, 34px);
+    }
+
+    .hero-benefits {
+        gap: 18px;
+    }
+
+    .benefit-icon {
+        width: 65px;
+        height: 65px;
+    }
+
+
+    /* MUDRA */
+
+    .mudra-content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .mudra-coin {
+        width: 250px;
+        height: 250px;
+    }
+
+    .mudra-benefits {
+        width: 250px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar-container {
+        width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .nav-links {
+        gap: 22px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-container {
+        min-height: auto;
+        padding: 35px 25px 40px;
+        gap: 15px;
+    }
+
+    .hero-content {
+        width: 50%;
+    }
+
+    .hero-product-area {
+        width: 50%;
+    }
+
+    .hero-title {
+        font-size: clamp(50px, 7vw, 75px);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(20px, 3vw, 32px);
+    }
+
+    .hero-heading {
+        font-size: clamp(19px, 2.5vw, 28px);
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+    .hero-benefits {
+        gap: 10px;
+    }
+
+    .hero-benefit span {
+        font-size: 14px;
+    }
+
+    .benefit-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .hero-button {
+        min-width: 210px;
+    }
+
+    .product-box {
+        transform: scale(.85);
+        transform-origin: center;
+    }
+
+    .hero-info-card {
+        transform: scale(.85);
+        transform-origin: right center;
+    }
+
+
+    /* ---------- MUDRA ---------- */
+
+    .mudra-content {
+        grid-template-columns: minmax(0, 1fr) 70px minmax(0, 1fr);
+        padding: 0 20px;
+    }
+
+    .mudra-coin {
+        width: 220px;
+        height: 220px;
+    }
+
+    .mudra-label {
+        width: 90%;
+    }
+
+    .mudra-benefits {
+        width: 220px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        min-width: 0;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    .top-bar {
+        height: 30px;
+        min-height: 30px;
+        padding: 0 12px;
+    }
+
+    .top-bar-inner {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .top-bar-item {
+        font-size: 8px;
+        white-space: nowrap;
+    }
+
+    .top-bar-item:nth-child(3),
+    .top-bar-item:nth-child(4) {
+        display: none;
+    }
+
+
+    .navbar {
+        height: 65px;
+        min-height: 65px;
+    }
+
+    .navbar-container {
+        height: 100%;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        max-width: 180px;
+        height: auto;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        width: 100%;
+        min-height: 0;
+    }
+
+    .hero-container {
+        width: 100%;
+        padding: 0;
+        display: block;
+    }
+
+    /*
+       IMPORTANT:
+       Background image remains the hero background.
+       Content is positioned over it.
+    */
+
+    .hero-content {
+        width: 53%;
+        padding: 18px 0 18px 8%;
+        position: relative;
+        z-index: 3;
+    }
+
+    .hero-shlok {
+        margin-bottom: 3px;
+        font-size: clamp(9px, 2.4vw, 14px);
+    }
+
+    .hero-title {
+        margin: 0;
+        font-size: clamp(35px, 10vw, 58px);
+        line-height: .95;
+    }
+
+    .hero-subtitle {
+        margin-top: 3px;
+        font-size: clamp(13px, 3.5vw, 21px);
+        line-height: 1;
+    }
+
+    .hero-divider {
+        margin: 7px 0;
+        gap: 7px;
+    }
+
+    .hero-divider span {
+        width: 28px;
+    }
+
+    .hero-heading {
+        font-size: clamp(13px, 3.4vw, 20px);
+        line-height: 1.15;
+        white-space: nowrap;
+    }
+
+    .hero-description {
+        margin-top: 3px;
+        font-size: clamp(10px, 2.8vw, 16px);
+        line-height: 1.2;
+    }
+
+
+    /* ---------- HERO BENEFITS ---------- */
+
+    .hero-benefits {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+        gap: clamp(5px, 2vw, 14px);
+    }
+
+    .hero-benefit {
+        min-width: 0;
+        flex: 0 1 auto;
+        text-align: center;
+    }
+
+    .benefit-icon {
+        width: clamp(34px, 10vw, 52px);
+        height: clamp(34px, 10vw, 52px);
+        margin: 0 auto 3px;
+    }
+
+    .hero-benefit span {
+        display: block;
+        font-size: clamp(7px, 2vw, 12px);
+        line-height: 1.05;
+    }
+
+
+    /* ---------- HERO BUTTON ---------- */
+
+    .hero-button {
+        margin-top: 9px;
+        width: clamp(125px, 35vw, 190px);
+        min-width: 0;
+        height: clamp(32px, 8vw, 45px);
+        padding: 0 15px;
+        font-size: clamp(12px, 3.2vw, 18px);
+    }
+
+    .hero-button-arrow {
+        font-size: 18px;
+    }
+
+
+    /* ---------- HERO PRODUCT ---------- */
+
+    .hero-product-area {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 55%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .product-box {
+        position: absolute;
+        width: 100%;
+        right: -8%;
+        top: 9%;
+        transform: none;
+    }
+
+    .hero-info-card {
+        position: absolute;
+        right: 2%;
+        top: 10%;
+        width: 23%;
+        min-width: 72px;
+        transform: none;
+        z-index: 4;
+    }
+
+    .hero-info-card h4 {
+        font-size: clamp(8px, 2.4vw, 13px);
+        line-height: 1.15;
+    }
+
+    .info-item {
+        font-size: clamp(7px, 2vw, 11px);
+    }
+
+
+    /* =====================================================
+       MUDRA SECTION
+    ===================================================== */
+
+    .mudra-section {
+        width: 100%;
+        padding: 12px 0 15px;
+    }
+
+    .mudra-container {
+        width: 100%;
+        padding: 0;
+    }
+
+
+    /* ---------- HEADING ---------- */
+
+    .mudra-heading {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        white-space: nowrap;
+    }
+
+    .mudra-heading h2 {
+        margin: 0;
+        font-size: clamp(17px, 5vw, 28px);
+        line-height: 1.1;
+    }
+
+    .heading-line {
+        width: 20px;
+        min-width: 20px;
+        height: 1px;
+    }
+
+    .heading-diamond {
+        font-size: 8px;
+    }
+
+    .mudra-intro {
+        margin: 3px 0 9px;
+        font-size: clamp(9px, 2.7vw, 14px);
+        text-align: center;
+    }
+
+
+    /* ---------- MUDRA CONTENT ---------- */
+
+    .mudra-content {
+        width: 100%;
+        padding: 0 2%;
+        display: grid;
+        grid-template-columns:
+            minmax(0, 1fr)
+            clamp(35px, 10vw, 55px)
+            minmax(0, 1fr);
+        align-items: start;
+        column-gap: 0;
+    }
+
+
+    /* ---------- LEFT / RIGHT COIN ---------- */
+
+    .mudra-side {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mudra-side-left {
+        grid-column: 1;
+    }
+
+    .mudra-side-right {
+        grid-column: 3;
+    }
+
+    .mudra-coin-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .mudra-coin {
+        width: clamp(105px, 29vw, 165px);
+        height: clamp(105px, 29vw, 165px);
+        object-fit: contain;
+    }
+
+
+    /* ---------- LABEL ---------- */
+
+    .mudra-label {
+        width: 92%;
+        min-height: 40px;
+        margin-top: 4px;
+        padding: 4px 2px 5px;
+        border-radius: 5px;
+    }
+
+    .mudra-label h3 {
+        margin: 0;
+        font-size: clamp(10px, 3vw, 16px);
+        line-height: 1.1;
+        white-space: nowrap;
+    }
+
+    .mudra-label p {
+        margin: 2px 0 0;
+        font-size: clamp(7px, 2.2vw, 12px);
+        line-height: 1.1;
+        white-space: nowrap;
+    }
+
+
+    /* ---------- CENTER ---------- */
+
+    .mudra-center {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        min-height: clamp(150px, 42vw, 210px);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mudra-center-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        font-size: clamp(10px, 3vw, 16px);
+        line-height: 1;
+        text-align: center;
+    }
+
+    .mudra-arrow {
+        position: static;
+        height: 20px;
+        font-size: clamp(13px, 4vw, 20px);
+        line-height: 1;
+    }
+
+    .mudra-arrow-top {
+        margin-bottom: 2px;
+    }
+
+    .mudra-arrow-bottom {
+        margin-top: 2px;
+    }
+
+
+    /* ---------- BENEFITS HIDDEN ON MOBILE ---------- */
+
+    .mudra-benefits {
+        display: none;
+    }
+
+
+    /* =====================================================
+       GENERAL SECTIONS
+    ===================================================== */
+
+    .section-container,
+    .products-container,
+    .benefits-container,
+    .testimonials-container,
+    .contact-container {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .section-title {
+        font-size: clamp(24px, 7vw, 38px);
+        line-height: 1.15;
+    }
+
+    .section-subtitle {
+        font-size: clamp(12px, 3.5vw, 18px);
+    }
+
+
+    /* ---------- PRODUCT CARDS ---------- */
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .product-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+
+    /* ---------- BENEFITS ---------- */
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+
+    /* ---------- TESTIMONIALS ---------- */
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .testimonial-card {
+        width: 100%;
+    }
+
+
+    /* ---------- OFFER ---------- */
+
+    .offer-section {
+        width: 100%;
+    }
+
+    .offer-container {
+        width: 100%;
+        padding: 12px 15px;
+    }
+
+    .offer-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-container {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    /* ---------- NAV ---------- */
+
+    .top-bar {
+        height: 26px;
+        min-height: 26px;
+    }
+
+    .top-bar-item {
+        font-size: 7px;
+    }
+
+    .navbar {
+        height: 58px;
+        min-height: 58px;
+    }
+
+    .navbar-container {
+        padding: 0 12px;
+    }
+
+    .logo {
+        max-width: 155px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-content {
+        width: 54%;
+        padding-left: 7%;
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+
+    .hero-product-area {
+        width: 57%;
+    }
+
+    .hero-title {
+        font-size: clamp(32px, 10vw, 48px);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(12px, 3.6vw, 17px);
+    }
+
+    .hero-heading {
+        font-size: clamp(11px, 3.3vw, 16px);
+    }
+
+    .hero-description {
+        font-size: clamp(9px, 2.7vw, 13px);
+    }
+
+    .hero-benefits {
+        margin-top: 7px;
+        gap: 3px;
+    }
+
+    .benefit-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .hero-benefit span {
+        font-size: 7px;
+    }
+
+    .hero-button {
+        margin-top: 7px;
+        width: 125px;
+        height: 31px;
+        padding: 0 10px;
+        font-size: 11px;
+    }
+
+    .hero-button-arrow {
+        font-size: 14px;
+    }
+
+
+    /* ---------- MUDRA ---------- */
+
+    .mudra-section {
+        padding-top: 8px;
+        padding-bottom: 10px;
+    }
+
+    .mudra-heading {
+        gap: 3px;
+    }
+
+    .heading-line {
+        width: 14px;
+        min-width: 14px;
+    }
+
+    .heading-diamond {
+        font-size: 7px;
+    }
+
+    .mudra-heading h2 {
+        font-size: 17px;
+    }
+
+    .mudra-intro {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+
+    .mudra-content {
+        grid-template-columns:
+            minmax(0, 1fr)
+            30px
+            minmax(0, 1fr);
+        padding: 0 1%;
+    }
+
+    .mudra-coin {
+        width: 110px;
+        height: 110px;
+    }
+
+    .mudra-center {
+        min-height: 145px;
+    }
+
+    .mudra-center-text {
+        font-size: 10px;
+    }
+
+    .mudra-arrow {
+        font-size: 14px;
+        height: 17px;
+    }
+
+    .mudra-label {
+        width: 96%;
+        min-height: 36px;
+        padding: 3px 1px;
+    }
+
+    .mudra-label h3 {
+        font-size: 10px;
+    }
+
+    .mudra-label p {
+        font-size: 7px;
+    }
+
+
+    /* ---------- OTHER GRIDS ---------- */
+
+    .products-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 7px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES — 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .hero-content {
+        padding-left: 6%;
+    }
+
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .hero-subtitle {
+        font-size: 11px;
+    }
+
+    .hero-heading {
+        font-size: 10px;
+    }
+
+    .hero-description {
+        font-size: 8px;
+    }
+
+    .hero-benefits {
+        gap: 2px;
+    }
+
+    .benefit-icon {
+        width: 29px;
+        height: 29px;
+    }
+
+    .hero-benefit span {
+        font-size: 6px;
+    }
+
+    .hero-button {
+        width: 112px;
+        height: 29px;
+        font-size: 10px;
+    }
+
+
+    .mudra-heading h2 {
+        font-size: 15px;
+    }
+
+    .mudra-coin {
+        width: 95px;
+        height: 95px;
+    }
+
+    .mudra-content {
+        grid-template-columns:
+            minmax(0, 1fr)
+            27px
+            minmax(0, 1fr);
+    }
+
+    .mudra-center {
+        min-height: 125px;
+    }
+
+    .mudra-center-text {
+        font-size: 9px;
+    }
+
+    .mudra-label h3 {
+        font-size: 9px;
+    }
+
+    .mudra-label p {
+        font-size: 6px;
+    }
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1150px) {
+
+    .products-section {
+        padding: 62px 3%;
+    }
+
+    .products-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL TABLET
+===================================================== */
+
+@media (max-width: 780px) {
+
+    .products-section {
+        padding: 52px 18px 60px;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+        gap: 9px;
+    }
+
+    .heading-line {
+        width: 42px;
+    }
+
+    .products-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 16px;
+    }
+
+    .product-content {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 520px) {
+
+    .products-section {
+        padding: 42px 13px 50px;
+    }
+
+    .section-heading {
+        gap: 7px;
+        margin-bottom: 26px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .section-heading p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .heading-line {
+        width: 28px;
+    }
+
+    .heading-symbol {
+        font-size: 13px;
+    }
+
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+
+    .product-card {
+        border-radius: 12px;
+    }
+
+
+    .product-image-wrap {
+        aspect-ratio: 1.7 / 1;
+    }
+
+
+    .product-content h3 {
+        font-size: 23px;
+    }
+
+
+    .product-content p {
+        font-size: 15px;
+    }
+
+
+    .product-btn {
+        font-size: 16px;
+    }
+
+}
+
+/* =========================================
+   FOOTER TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .footer-main {
+        padding: 55px 0 45px;
+    }
+
+
+    .footer-container {
+        grid-template-columns:
+            1.5fr
+            1fr
+            1fr;
+
+        gap: 40px 30px;
+    }
+
+
+    .footer-brand {
+        grid-row: span 2;
+    }
+
+
+    .footer-trust-container {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .footer-trust-item:nth-child(3) {
+        border-right: none;
+    }
+
+
+    .footer-trust-item:nth-child(-n + 3) {
+        border-bottom:
+            1px solid rgba(237, 194, 104, 0.22);
+    }
+
+
+    .footer-bottom-container {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .footer-tagline {
+        order: 3;
+
+        grid-column: 1 / -1;
+    }
+
+
+    .footer-legal {
+        justify-content: flex-end;
+    }
+
+}
+
+/* =========================================
+   FOOTER MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .footer-main {
+        padding: 45px 0 35px;
+    }
+
+
+    .footer-container {
+        width: 90%;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 38px 25px;
+    }
+
+
+    .footer-brand {
+        grid-column: 1 / -1;
+
+        grid-row: auto;
+
+        padding-right: 0;
+
+        text-align: center;
+    }
+
+
+    .footer-logo {
+        padding: 10px 16px;
+    }
+
+
+    .footer-logo img {
+        width: 190px;
+    }
+
+
+    .footer-description {
+        max-width: 480px;
+
+        margin: 20px auto;
+
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+
+    .footer-primary-btn {
+        min-width: 180px;
+
+        font-size: 16px;
+    }
+
+
+    .footer-social {
+        justify-content: center;
+    }
+
+
+    .footer-column h3 {
+        font-size: 17px;
+    }
+
+
+    .footer-column li a {
+        font-size: 13px;
+    }
+
+
+    .footer-contact {
+        grid-column: 1 / -1;
+    }
+
+
+    /* TRUST */
+
+    .footer-trust-container {
+        width: 100%;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .footer-trust-item {
+        min-height: 75px;
+
+        padding: 12px 8px;
+    }
+
+
+    .footer-trust-item:nth-child(3) {
+        border-right:
+            1px solid rgba(237, 194, 104, 0.22);
+    }
+
+
+    .footer-trust-item:nth-child(2n) {
+        border-right: none;
+    }
+
+
+    .footer-trust-item:nth-child(-n + 4) {
+        border-bottom:
+            1px solid rgba(237, 194, 104, 0.22);
+    }
+
+
+    .footer-trust-icon {
+        font-size: 21px;
+    }
+
+
+    .footer-trust-item strong {
+        font-size: 12px;
+    }
+
+
+    .footer-trust-item span {
+        font-size: 10px;
+    }
+
+
+    /* BOTTOM */
+
+    .footer-bottom-container {
+        width: 90%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 13px;
+
+        padding: 22px 0;
+    }
+
+
+    .footer-copyright {
+        text-align: center;
+
+        order: 1;
+    }
+
+
+    .footer-tagline {
+        order: 2;
+
+        font-size: 15px;
+    }
+
+
+    .footer-legal {
+        order: 3;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 7px;
+
+        text-align: center;
+
+        line-height: 1.8;
+    }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+    }
+
+
+    .footer-column,
+    .footer-contact {
+        grid-column: auto;
+    }
+
+
+    .footer-column {
+        text-align: center;
+    }
+
+
+    .footer-heading-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .footer-column li a:hover {
+        padding-left: 0;
+    }
+
+
+    .footer-column li a::before {
+        display: none;
+    }
+
+
+    .contact-item {
+        justify-content: center;
+
+        text-align: left;
+    }
+
+
+    .footer-trust-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-trust-item,
+    .footer-trust-item:nth-child(3) {
+        border-right: none !important;
+
+        border-bottom:
+            1px solid rgba(237, 194, 104, 0.22);
+    }
+
+
+    .footer-trust-item:last-child {
+        border-bottom: none;
+    }
+
+
+    .footer-copyright {
+        font-size: 11px;
+    }
+
+
+    .footer-legal {
+        font-size: 10px;
+    }
+
+}
+
+/* =========================================================
+   WHY SECTION — FINAL MOBILE OVERRIDE
+   SECTION: #benefits
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    #benefits {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    #benefits *,
+    #benefits *::before,
+    #benefits *::after {
+        box-sizing: border-box !important;
+    }
+
+
+    /* Keep section inside viewport */
+
+    #benefits > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+
+    /* Any grid inside WHY */
+
+    #benefits .why-grid,
+    #benefits .why-content,
+    #benefits .benefits-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 0 !important;
+    }
+
+
+    /* Gift section */
+
+    #benefits .gift-card,
+    #benefits .why-gift,
+    #benefits .gift-box {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    #benefits {
+        width: 100vw !important;
+        max-width: 100vw !important;
+
+        margin: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    /* ---------------------------------------------
+       SECTION INNER CONTAINER
+    --------------------------------------------- */
+
+    #benefits > div {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+
+    /* ---------------------------------------------
+       HEADING
+    --------------------------------------------- */
+
+    #benefits h2 {
+        max-width: 100% !important;
+
+        font-size: 25px !important;
+        line-height: 1.3 !important;
+
+        text-align: center !important;
+
+        white-space: normal !important;
+        word-break: normal !important;
+    }
+
+    #benefits p {
+        max-width: 100% !important;
+    }
+
+
+    /* ---------------------------------------------
+       MAIN BENEFITS GRID
+    --------------------------------------------- */
+
+    #benefits .why-grid,
+    #benefits .why-content,
+    #benefits .benefits-grid {
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        gap: 0 !important;
+    }
+
+
+    /* ---------------------------------------------
+       ALL BENEFIT ITEMS
+    --------------------------------------------- */
+
+    #benefits .why-item,
+    #benefits .why-card,
+    #benefits .benefit-item,
+    #benefits .benefit-card {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        flex: 0 0 auto !important;
+
+        margin: 0 !important;
+
+        padding: 24px 15px !important;
+
+        text-align: center !important;
+    }
+
+
+    /* ---------------------------------------------
+       ICON
+    --------------------------------------------- */
+
+    #benefits .why-icon,
+    #benefits .why-item-icon,
+    #benefits .benefit-icon {
+
+        flex-shrink: 0 !important;
+
+        width: 58px !important;
+        height: 58px !important;
+
+        min-width: 58px !important;
+        min-height: 58px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+
+    /* ---------------------------------------------
+       TEXT
+    --------------------------------------------- */
+
+    #benefits .why-item h3,
+    #benefits .why-card h3,
+    #benefits .benefit-item h3,
+    #benefits .benefit-card h3 {
+
+        font-size: 20px !important;
+        line-height: 1.35 !important;
+
+        margin-top: 10px !important;
+        margin-bottom: 5px !important;
+    }
+
+
+    #benefits .why-item p,
+    #benefits .why-card p,
+    #benefits .benefit-item p,
+    #benefits .benefit-card p {
+
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* ---------------------------------------------
+       GIFT CARD
+    --------------------------------------------- */
+
+    #benefits .gift-card,
+    #benefits .why-gift,
+    #benefits .gift-box {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 15px 0 0 !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #benefits .gift-card img,
+    #benefits .why-gift img,
+    #benefits .gift-box img {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        display: block !important;
+
+        object-fit: cover !important;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    #benefits > div {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+
+    #benefits h2 {
+        font-size: 22px !important;
+    }
+
+
+    #benefits .why-item,
+    #benefits .why-card,
+    #benefits .benefit-item,
+    #benefits .benefit-card {
+
+        padding: 20px 10px !important;
+    }
+
+
+    #benefits .why-item h3,
+    #benefits .why-card h3,
+    #benefits .benefit-item h3,
+    #benefits .benefit-card h3 {
+
+        font-size: 18px !important;
+    }
+
+}
