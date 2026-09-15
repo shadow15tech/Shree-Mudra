@@ -7384,3 +7384,589 @@ button:focus-visible {
     }
 
 }
+
+/* =========================================================
+   LIVE ACTIVITY TICKER
+========================================================= */
+
+.live-activity-section {
+    position: relative;
+
+    width: 100%;
+    overflow: hidden;
+
+    background: #fffaf0;
+
+    border-top: 1px solid rgba(184, 115, 25, 0.16);
+    border-bottom: 1px solid rgba(184, 115, 25, 0.16);
+
+    margin: 0;
+    padding: 10px 0;
+
+    z-index: 20;
+}
+
+
+/* Main wrapper */
+
+.live-activity-wrapper {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 38px;
+}
+
+
+/* =========================================================
+   LIVE LABEL
+========================================================= */
+
+.live-activity-label {
+    position: relative;
+    z-index: 5;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 15px 7px 18px;
+
+    background: #fffaf0;
+
+    color: #9c160f;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    border-right: 1px solid rgba(184, 115, 25, 0.18);
+}
+
+
+/* Green live dot */
+
+.live-dot {
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    background: #20a83a;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 3px rgba(32, 168, 58, 0.12),
+        0 0 10px rgba(32, 168, 58, 0.4);
+
+    animation: livePulse 1.5s infinite;
+}
+
+
+@keyframes livePulse {
+
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .55;
+        transform: scale(.82);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   TICKER
+========================================================= */
+
+.live-ticker {
+    position: relative;
+
+    flex: 1;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 3%,
+        #000 97%,
+        transparent
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 3%,
+        #000 97%,
+        transparent
+    );
+}
+
+
+.live-ticker-track {
+
+    display: flex;
+    align-items: center;
+
+    width: max-content;
+
+    animation: liveTickerMove 55s linear infinite;
+
+    will-change: transform;
+}
+
+
+/* Continuous RIGHT → LEFT movement */
+
+@keyframes liveTickerMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* Pause when user hovers */
+
+.live-ticker:hover .live-ticker-track {
+    animation-play-state: paused;
+}
+
+
+/* =========================================================
+   ACTIVITY ITEM
+========================================================= */
+
+.activity-item {
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-right: 35px;
+
+    padding: 5px 0;
+
+    color: #68422b;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+.activity-item strong {
+    color: #8f1710;
+
+    font-weight: 700;
+}
+
+
+.activity-icon {
+
+    width: 24px;
+    height: 24px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+
+    border-radius: 50%;
+
+    background: rgba(201, 133, 31, 0.08);
+
+    border: 1px solid rgba(201, 133, 31, 0.22);
+}
+
+
+/* =========================================================
+   LIVE PURCHASE POPUP
+========================================================= */
+
+.live-purchase-popup {
+
+    position: fixed;
+
+    left: 20px;
+    bottom: 22px;
+
+    z-index: 9999;
+
+    width: min(330px, calc(100vw - 40px));
+
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 38px 13px 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf7,
+            #fff6df
+        );
+
+    border: 1px solid rgba(187, 126, 32, 0.42);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 35px rgba(76, 39, 10, 0.16),
+        0 2px 8px rgba(76, 39, 10, 0.08);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(20px)
+        scale(.96);
+
+    transition:
+        opacity .45s ease,
+        transform .45s ease,
+        visibility .45s ease;
+}
+
+
+/* Visible */
+
+.live-purchase-popup.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =========================================================
+   POPUP ICON
+========================================================= */
+
+.live-popup-icon {
+
+    width: 44px;
+    height: 44px;
+
+    min-width: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff,
+            #f7e6bf
+        );
+
+    border: 1px solid rgba(187, 126, 32, 0.35);
+
+    font-size: 22px;
+
+    box-shadow:
+        inset 0 1px 3px rgba(255,255,255,.8);
+}
+
+
+/* =========================================================
+   POPUP CONTENT
+========================================================= */
+
+.live-popup-content {
+
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+.live-popup-top {
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 3px;
+}
+
+
+.live-popup-live {
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 4px;
+
+    color: #23843a;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: .7px;
+}
+
+
+.live-popup-live span {
+
+    width: 6px;
+    height: 6px;
+
+    background: #21a33b;
+
+    border-radius: 50%;
+
+    animation: livePulse 1.5s infinite;
+}
+
+
+.live-popup-time {
+
+    color: #92745c;
+
+    font-size: 9px;
+}
+
+
+.live-popup-content p {
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    margin: 0 0 2px;
+
+    line-height: 1.25;
+}
+
+
+.live-popup-content p strong {
+
+    color: #8e1710;
+
+    font-size: 13px;
+}
+
+
+.live-popup-location {
+
+    color: #76553d;
+
+    font-size: 10px;
+}
+
+
+.live-popup-content small {
+
+    display: block;
+
+    color: #65442e;
+
+    font-size: 10px;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.live-popup-close {
+
+    position: absolute;
+
+    top: 7px;
+    right: 8px;
+
+    width: 21px;
+    height: 21px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #98765c;
+
+    font-size: 17px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        color .2s ease,
+        transform .2s ease;
+}
+
+
+.live-popup-close:hover {
+
+    color: #94170f;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .live-activity-section {
+        padding: 8px 0;
+    }
+
+
+    .live-activity-label {
+
+        padding-left: 12px;
+        padding-right: 12px;
+
+        font-size: 11px;
+    }
+
+
+    .activity-item {
+
+        font-size: 11px;
+
+        margin-right: 25px;
+    }
+
+
+    .activity-icon {
+
+        width: 22px;
+        height: 22px;
+
+        font-size: 13px;
+    }
+
+
+    .live-purchase-popup {
+
+        left: 12px;
+        bottom: 14px;
+
+        width: min(310px, calc(100vw - 24px));
+
+        min-height: 70px;
+
+        padding: 11px 34px 11px 10px;
+
+        border-radius: 10px;
+    }
+
+
+    .live-popup-icon {
+
+        width: 38px;
+        height: 38px;
+
+        min-width: 38px;
+
+        font-size: 19px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .live-activity-label {
+
+        padding-left: 9px;
+        padding-right: 9px;
+
+        font-size: 10px;
+    }
+
+
+    .live-dot {
+
+        width: 7px;
+        height: 7px;
+    }
+
+
+    .activity-item {
+
+        font-size: 10px;
+
+        margin-right: 22px;
+    }
+
+
+    .activity-icon {
+
+        width: 20px;
+        height: 20px;
+
+        font-size: 12px;
+    }
+
+
+    .live-purchase-popup {
+
+        left: 10px;
+        bottom: 10px;
+
+        width: calc(100vw - 20px);
+
+        max-width: 290px;
+    }
+
+}
